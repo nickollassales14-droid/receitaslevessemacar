@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, type ReactNode } from "react";
 import {
   Smartphone, Monitor, Tablet, Printer, ShieldCheck, Download, Check, Leaf, Wheat, Milk,
-  CandyOff, Coffee, BookOpen, Utensils, Croissant, Cookie, Soup, CupSoda, Sandwich, IceCream,
+  CandyOff, Coffee, BookOpen, Utensils, Croissant, Soup, CupSoda, Sandwich, IceCream,
   Gift, ShoppingBasket, CalendarDays, Repeat, Star, ChevronLeft, ChevronRight, MessageSquareQuote, Sparkles,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
