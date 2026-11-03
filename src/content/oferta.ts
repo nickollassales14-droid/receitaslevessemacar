@@ -7,9 +7,9 @@ export const ofertas = [
     preco: "R$ 00,00", // defina o preço
     precoAntigo: "", // opcional, ex: "R$ 97,00"
     itens: [
-      "Livro digital com 365 receitas",
+      "Coleção digital com 365 receitas",
       "Receitas organizadas por categoria",
-      "Acesso digital",
+      "Acesso digital à coleção",
       "Consulta pelo celular ou computador",
     ],
     botao: "QUERO O PACOTE ESSENCIAL",
@@ -46,7 +46,7 @@ export type Depoimento = {
 export const depoimentos: Depoimento[] = [];
 
 export const rodape = {
-  produto: "365 Receitas",
+  produto: "365 Receitas Leves Sem Açúcar",
   privacidade: "#",
   termos: "#",
   reembolso: "#",

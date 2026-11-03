@@ -21,10 +21,10 @@ import cookies from "@/assets/r-cookies.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" },
-      { name: "description", content: "Livro digital com 365 receitas doces e salgadas sem açúcar adicionado, sem glúten e sem lactose para variar sua rotina." },
-      { property: "og:title", content: "365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose" },
-      { property: "og:description", content: "365 ideias de receitas práticas para café, almoço, jantar e sobremesa." },
+      { title: "365 Receitas Leves Sem Açúcar | Coleção digital" },
+      { name: "description", content: "Coleção digital com 365 receitas deliciosas, com opções sem açúcar adicionado, sem glúten e sem lactose para variar sua rotina." },
+      { property: "og:title", content: "365 Receitas Leves Sem Açúcar" },
+      { property: "og:description", content: "Descubra um novo jeito de aproveitar cada receita: 365 inspirações para sua cozinha." },
     ],
   }),
   component: Index,
@@ -46,33 +46,33 @@ const Cta = ({ children, className = "" }: { children: ReactNode; className?: st
   <a href="#ofertas" className={`btn-cta ${className}`}>{children}</a>
 );
 
-const Title = ({ eyebrow, children }: { eyebrow?: string; children: ReactNode }) => (
+const Title = ({ eyebrow, children, sub }: { eyebrow?: string; children: ReactNode; sub?: string }) => (
   <Reveal className="mx-auto mb-12 max-w-3xl text-center">
     {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
     <h2 className="text-3xl font-bold leading-tight text-primary md:text-5xl">{children}</h2>
     <div className="mx-auto mt-5 flex items-center justify-center gap-2 text-secondary"><span className="h-px w-10 bg-secondary/50" /><Leaf className="h-4 w-4" /><span className="h-px w-10 bg-secondary/50" /></div>
+    {sub && <p className="mt-5 text-muted-foreground md:text-lg">{sub}</p>}
   </Reveal>
 );
 
 const beneficios = [
-  { i: BookOpen, t: "365 receitas doces e salgadas" },
+  { i: Utensils, t: "Ideias para diferentes refeições" },
   { i: CandyOff, t: "Opções sem açúcar adicionado" },
-  { i: Wheat, t: "Receitas sem glúten" },
-  { i: Milk, t: "Preparações sem lactose" },
-  { i: Utensils, t: "Café da manhã, almoço, jantar e sobremesa" },
-  { i: Sparkles, t: "Receitas organizadas e fáceis de consultar" },
-  { i: Smartphone, t: "Acesso pelo celular, tablet ou computador" },
+  { i: Wheat, t: "Preparações sem glúten" },
+  { i: Milk, t: "Alternativas sem lactose" },
+  { i: BookOpen, t: "Receitas doces e salgadas" },
+  { i: Sparkles, t: "Conteúdo organizado para facilitar sua consulta" },
 ];
 
 const receitas = [
-  { img: bolo, n: "Bolo de cenoura com cobertura", d: "Fofinho, úmido e com cobertura de chocolate." },
-  { img: pao, n: "Pão caseiro sem glúten", d: "Casquinha crocante e miolo macio." },
-  { img: panqueca, n: "Panqueca de banana", d: "Café da manhã rápido com frutas frescas." },
-  { img: lasanha, n: "Lasanha sem glúten", d: "Camadas de legumes e molho caseiro." },
-  { img: brigadeiro, n: "Brigadeiro sem açúcar adicionado", d: "O clássico docinho em versão mais leve." },
-  { img: torta, n: "Torta salgada de frango", d: "Recheio cremoso para toda a família." },
-  { img: brownie, n: "Brownie de chocolate", d: "Casquinha craquelada e interior macio." },
-  { img: cookies, n: "Cookies sem glúten", d: "Com aveia e gotas de chocolate." },
+  { img: bolo, n: "Bolo de cenoura com cobertura", d: "Aquele bolo fofinho da tarde, com cobertura brilhante de chocolate." },
+  { img: pao, n: "Pão caseiro sem glúten", d: "Cheirinho de pão saindo do forno, com casca crocante e miolo macio." },
+  { img: panqueca, n: "Panqueca de banana", d: "Um café da manhã gostoso e rápido, com frutas frescas por cima." },
+  { img: lasanha, n: "Lasanha sem glúten", d: "Camadas generosas de legumes e molho caseiro para o almoço de domingo." },
+  { img: brigadeiro, n: "Brigadeiro sem açúcar adicionado", d: "O docinho mais querido, em uma versão sem açúcar adicionado." },
+  { img: torta, n: "Torta salgada de frango", d: "Massa dourada e recheio cremoso para reunir a família." },
+  { img: brownie, n: "Brownie de chocolate", d: "Casquinha craquelada por fora e aquele centro úmido por dentro." },
+  { img: cookies, n: "Cookies sem glúten", d: "Crocantes, com aveia e gotas de chocolate, para acompanhar o café." },
 ];
 
 const categorias = [
@@ -103,15 +103,15 @@ const bonus = [
 ];
 
 const faq = [
-  ["Como vou receber o livro?", "Após a confirmação da compra, o material é disponibilizado digitalmente pelo canal de entrega informado no momento da compra."],
-  ["Posso acessar pelo celular?", "Sim. O livro pode ser consultado no celular, tablet ou computador."],
-  ["Preciso ter experiência na cozinha?", "Não. As receitas são apresentadas de forma prática, pensadas também para quem tem pouca experiência."],
-  ["As receitas utilizam ingredientes difíceis de encontrar?", "A proposta é priorizar ingredientes comuns. Algumas receitas podem usar itens específicos, como farinhas sem glúten, encontrados em mercados e lojas de produtos naturais."],
-  ["O material contém receitas doces e salgadas?", "Sim. Há opções para café da manhã, almoço, jantar, lanches, sobremesas, molhos e bebidas."],
-  ["Posso imprimir o livro?", "Sim, você pode imprimir as páginas que desejar para uso pessoal."],
+  ["Como vou receber minha coleção?", "Após a confirmação da compra, o 365 Receitas Leves Sem Açúcar é disponibilizado digitalmente pelo canal de entrega informado no momento da compra."],
+  ["Em quais aparelhos posso acessar?", "A coleção é digital e pode ser consultada no celular, tablet ou computador, quando e onde você quiser."],
+  ["Preciso ter experiência na cozinha?", "Não. O passo a passo é prático e pensado também para quem está começando na cozinha."],
+  ["Os ingredientes são fáceis de encontrar?", "A proposta é priorizar ingredientes comuns. Algumas receitas podem usar itens específicos, como farinhas sem glúten, encontrados em mercados e lojas de produtos naturais."],
+  ["A coleção tem receitas doces e salgadas?", "Sim. São 365 receitas com opções para café da manhã, almoço, jantar, lanches, sobremesas, molhos e bebidas."],
+  ["Posso imprimir as receitas?", "Sim, você pode imprimir as páginas que desejar para uso pessoal."],
   ["Por quanto tempo terei acesso?", "O acesso segue as condições informadas na oferta. Por ser um arquivo digital, você pode guardá-lo em seus dispositivos."],
   ["Como funciona a garantia?", "Você tem 15 dias para conhecer o material. Consulte a política de reembolso para saber como solicitar dentro do prazo aplicável."],
-  ["O livro é adequado para pessoas com doença celíaca?", "As receitas são elaboradas sem ingredientes com glúten, mas o livro não substitui orientação profissional. Pessoas com doença celíaca, alergias ou condições de saúde devem verificar rótulos (risco de contaminação cruzada) e consultar um médico ou nutricionista."],
+  ["A coleção é indicada para pessoas com doença celíaca?", "As receitas sem glúten são elaboradas sem ingredientes que contêm glúten, mas a coleção não substitui orientação profissional. Pessoas com doença celíaca, alergias ou condições de saúde devem verificar rótulos (risco de contaminação cruzada) e consultar um médico ou nutricionista."],
   ["Sem açúcar significa sem açúcares naturais?", "Não. \"Sem açúcar\" significa sem açúcar adicionado. Ingredientes como frutas e leites vegetais podem conter açúcares naturais. \"Sem glúten\" e \"sem lactose\" referem-se à ausência desses componentes nos ingredientes indicados."],
 ];
 
@@ -140,16 +140,16 @@ function Index() {
       <section className="relative">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:py-20 lg:grid-cols-2">
           <div className="text-center lg:text-left">
-            <p className="eyebrow mb-4">Livro digital · 365 ideias</p>
+            <p className="eyebrow mb-4">365 Receitas Leves Sem Açúcar</p>
             <h1 className="text-4xl font-bold leading-[1.08] text-primary sm:text-5xl xl:text-6xl">
-              365 Receitas <span className="italic text-accent">sem açúcar,</span> sem glúten e sem lactose
+              Descubra um novo jeito de <span className="italic text-accent">aproveitar cada receita!</span>
             </h1>
             <div className="mt-8 lg:hidden">
-              <img src={hero} alt="Livro 365 Receitas com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
+              <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
             </div>
-            <p className="mt-6 text-lg text-foreground md:text-xl">Descubra novas maneiras de preparar refeições, doces e sobremesas deliciosas para transformar sua rotina na cozinha.</p>
-            <p className="mt-3 text-muted-foreground">Um livro digital com 365 ideias de receitas práticas, organizadas para facilitar seu dia a dia e ajudar você a variar o cardápio.</p>
-            <Cta className="mt-8 w-full text-base sm:w-auto sm:text-lg">QUERO AS 365 RECEITAS!</Cta>
+            <p className="mt-6 text-lg text-foreground md:text-xl">365 receitas para explorar novos sabores, preparar pratos deliciosos e deixar sua rotina na cozinha muito mais variada.</p>
+            <p className="mt-3 text-muted-foreground">Uma coleção digital repleta de ideias para cafés da manhã, refeições, lanches e sobremesas, com opções sem açúcar adicionado, sem glúten e sem lactose.</p>
+            <Cta className="mt-8 w-full text-base sm:w-auto sm:text-lg">QUERO MINHAS 365 RECEITAS!</Cta>
             <ul className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
               {[[Download, "Acesso digital após a compra"], [Smartphone, "Para celular e computador"], [ShieldCheck, "Garantia de 15 dias*"]].map(([I, t], k) => {
                 const Icon = I as typeof Leaf;
@@ -160,7 +160,7 @@ function Index() {
           </div>
           <div className="relative hidden lg:block">
             <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-muted" />
-            <img src={hero} alt="Livro 365 Receitas com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-[2rem] shadow-lift" />
+            <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-[2rem] shadow-lift" />
             <div className="absolute -left-6 top-10 grid h-24 w-24 rotate-[-10deg] place-items-center rounded-full bg-accent text-center text-xs font-bold leading-tight text-accent-foreground shadow-lift">365<br />RECEITAS</div>
             <div className="absolute -bottom-5 -right-4 flex items-center gap-2 rounded-full bg-card px-5 py-3 text-sm font-semibold text-primary shadow-lift"><Leaf className="h-4 w-4 text-secondary" />Doces & salgadas</div>
           </div>
@@ -170,10 +170,10 @@ function Index() {
       {/* Benefícios */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Por que você vai amar">Uma nova forma de variar sua alimentação</Title>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Title eyebrow="Por que você vai amar" sub="Chega de ficar sem ideias na hora de cozinhar! Tenha uma coleção completa de inspirações para descobrir novas combinações e preparar receitas para diferentes momentos do seu dia.">Mais variedade para sua rotina, mais sabor em cada preparação</Title>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {beneficios.map(({ i: I, t }, k) => (
-              <Reveal key={k} className={k === 6 ? "sm:col-span-2 lg:col-span-1" : ""}>
+              <Reveal key={k}>
                 <div className="card-soft flex h-full flex-col items-start gap-4 p-6">
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-muted text-secondary"><I className="h-6 w-6" /></span>
                   <p className="font-medium text-foreground">{t}</p>
@@ -187,7 +187,7 @@ function Index() {
       {/* Galeria */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-5">
-          <Title eyebrow="Uma prévia do livro">Olha só o que você vai poder preparar!</Title>
+          <Title eyebrow="Uma prévia da coleção" sub="Explore algumas das delícias que fazem parte da nossa coleção.">Qual delas você vai preparar primeiro?</Title>
           <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
             {receitas.map((r) => (
               <Reveal key={r.n}>
@@ -201,14 +201,14 @@ function Index() {
               </Reveal>
             ))}
           </div>
-          <div className="mt-12 text-center"><Cta>QUERO AS 365 RECEITAS!</Cta></div>
+          <div className="mt-12 text-center"><Cta>QUERO MINHAS 365 RECEITAS!</Cta></div>
         </div>
       </section>
 
       {/* Categorias */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Conteúdo do livro">365 receitas para você nunca ficar sem ideias</Title>
+          <Title eyebrow="O que tem na coleção" sub="Da primeira refeição do dia até aquela sobremesa especial, encontre inspirações para diferentes ocasiões.">365 ideias para inspirar seus momentos na cozinha</Title>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {categorias.map(({ i: I, n, q }) => (
               <Reveal key={n}>
@@ -233,7 +233,8 @@ function Index() {
           <Reveal><img src={table} alt="Mesa com diferentes preparações saudáveis" loading="lazy" width={1024} height={1152} className="w-full rounded-[2rem] shadow-lift" /></Reveal>
           <Reveal>
             <p className="eyebrow mb-3">Para quem é</p>
-            <h2 className="text-3xl font-bold leading-tight text-primary md:text-4xl">Esse material foi pensado para facilitar sua rotina</h2>
+            <h2 className="text-3xl font-bold leading-tight text-primary md:text-4xl">Encontre novas possibilidades para sua cozinha</h2>
+            <p className="mt-4 text-muted-foreground">Se você gosta de experimentar receitas diferentes, procura alternativas para determinados ingredientes ou simplesmente deseja variar seu cardápio, esta coleção foi pensada para trazer mais inspiração ao seu dia a dia.</p>
             <ul className="mt-8 space-y-4">
               {publico.map((p) => (
                 <li key={p} className="flex items-start gap-3"><span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-secondary text-secondary-foreground"><Check className="h-3.5 w-3.5" /></span><span>{p}</span></li>
@@ -246,7 +247,7 @@ function Index() {
       {/* Bônus */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Presentes exclusivos">Compre o livro e receba 3 presentes especiais!</Title>
+          <Title eyebrow="Materiais extras" sub="Além das receitas, você terá recursos complementares para organizar suas refeições e aproveitar ainda mais sua experiência.">E sua coleção vem acompanhada de materiais extras!</Title>
           <div className="grid gap-8 md:grid-cols-3">
             {bonus.map(({ i: I, n, d, c }, k) => (
               <Reveal key={n}>
@@ -257,7 +258,7 @@ function Index() {
                       <span className="absolute inset-y-0 left-0 w-2 bg-foreground/15" />
                       <I className="h-9 w-9" />
                       <span className="font-serif text-sm font-semibold leading-tight">{n}</span>
-                      <span className="text-[10px] uppercase tracking-widest opacity-80">365 Receitas</span>
+                      <span className="text-[10px] uppercase tracking-widest opacity-80">365 Receitas Leves</span>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-primary">{n}</h3>
@@ -272,7 +273,7 @@ function Index() {
       {/* Ofertas */}
       <section id="ofertas" className="scroll-mt-4 py-20">
         <div className="mx-auto max-w-5xl px-5">
-          <Title eyebrow="Oferta">Escolha sua opção e comece hoje!</Title>
+          <Title eyebrow="Oferta" sub="Tenha mais inspiração e praticidade para descobrir novas receitas todos os dias.">Escolha a experiência ideal para você</Title>
           <div className="grid items-center gap-8 md:grid-cols-2">
             {ofertas.map((o) => (
               <Reveal key={o.id} className={o.destaque ? "order-first md:order-none" : ""}>
@@ -297,11 +298,11 @@ function Index() {
       {/* Depoimentos */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Avaliações">Quem já conhece o material pode contar sua experiência</Title>
+          <Title eyebrow="Avaliações" sub="Histórias e experiências reais de pessoas que descobriram novas possibilidades na cozinha.">Veja as experiências de quem já conhece nossa coleção</Title>
           {depoimentos.length === 0 ? (
             <Reveal className="card-soft mx-auto max-w-xl p-10 text-center">
               <MessageSquareQuote className="mx-auto h-10 w-10 text-secondary" />
-              <p className="mt-4 font-serif text-xl text-primary">Em breve, avaliações de quem já preparou as receitas.</p>
+              <p className="mt-4 font-serif text-xl text-primary">Em breve, as experiências de quem já está cozinhando com a coleção.</p>
               <p className="mt-2 text-sm text-muted-foreground">Estamos reunindo depoimentos reais e autorizados de compradores.</p>
             </Reveal>
           ) : (
@@ -333,8 +334,8 @@ function Index() {
             <div className="text-center"><ShieldCheck className="mx-auto h-7 w-7 text-accent" /><p className="font-serif text-4xl font-bold leading-none">15</p><p className="text-xs font-semibold tracking-widest">DIAS DE<br />GARANTIA</p></div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-primary md:text-3xl">Você tem 15 dias para conhecer o material</h2>
-            <p className="mt-3 text-muted-foreground">Queremos que você tenha segurança na sua compra. Consulte as condições da garantia de 15 dias e saiba como solicitar o reembolso dentro do prazo aplicável.</p>
+            <h2 className="text-2xl font-bold text-primary md:text-3xl">Sua compra com mais tranquilidade</h2>
+            <p className="mt-3 text-muted-foreground">Você conta com um prazo de 15 dias de garantia, conforme as condições da oferta. Queremos que você tenha segurança para conhecer o material.</p>
             <a href={rodape.reembolso} className="mt-4 inline-block text-sm font-semibold text-secondary underline underline-offset-4">Ver política de reembolso</a>
           </div>
         </Reveal>
@@ -343,7 +344,7 @@ function Index() {
       {/* Entrega */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Entrega digital">Seu livro digital, onde você estiver</Title>
+          <Title eyebrow="Entrega digital" sub="Consulte suas receitas quando quiser, diretamente pelo celular, tablet ou computador. Tenha suas inspirações culinárias disponíveis em formato digital.">Sua coleção sempre à mão</Title>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {[[Smartphone, "Celular", "Consulte suas receitas pelo smartphone."], [Monitor, "Computador", "Visualize o material em uma tela maior."], [Tablet, "Tablet", "Tenha uma experiência confortável de leitura."], [Printer, "Impressão", "Imprima as páginas que desejar."]].map(([I, n, d]) => {
               const Icon = I as typeof Leaf;
@@ -352,7 +353,7 @@ function Index() {
               );
             })}
           </div>
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">O material é disponibilizado digitalmente após a confirmação da compra, pelo canal de entrega informado no momento da compra.</p>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">A coleção é disponibilizada digitalmente após a confirmação da compra, pelo canal de entrega informado no momento da compra.</p>
         </div>
       </section>
 
@@ -378,9 +379,9 @@ function Index() {
             {[bolo, panqueca, lasanha, brownie, pao].map((s, k) => <img key={k} src={s} alt="" loading="lazy" className="h-20 w-20 rounded-full border-4 border-primary object-cover md:h-24 md:w-24" />)}
           </div>
           <Reveal>
-            <h2 className="text-3xl font-bold leading-tight md:text-5xl">Suas próximas receitas favoritas podem estar aqui!</h2>
-            <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">Descubra novas possibilidades na cozinha e tenha 365 ideias para variar sua rotina.</p>
-            <Cta className="mt-8 w-full text-base sm:w-auto sm:px-10 sm:text-lg">QUERO CONHECER AS 365 RECEITAS</Cta>
+            <h2 className="text-3xl font-bold leading-tight md:text-5xl">365 novas inspirações para sua cozinha!</h2>
+            <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">Descubra receitas, experimente combinações e encontre novas maneiras de preparar seus pratos favoritos.</p>
+            <Cta className="mt-8 w-full text-base sm:w-auto sm:px-10 sm:text-lg">QUERO MINHA COLEÇÃO!</Cta>
           </Reveal>
         </div>
       </section>
@@ -400,7 +401,7 @@ function Index() {
 
       {/* Barra mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-between gap-3 border-t border-border bg-card/95 px-4 py-2.5 backdrop-blur md:hidden">
-        <div className="leading-tight"><p className="text-xs text-muted-foreground">Livro digital</p><p className="font-serif font-bold text-primary">365 Receitas</p></div>
+        <div className="leading-tight"><p className="text-xs text-muted-foreground">Coleção digital</p><p className="font-serif font-bold text-primary">365 Receitas Leves</p></div>
         <a href="#ofertas" className="btn-cta !min-h-11 !px-5 !py-2 text-sm">Ver ofertas</a>
       </div>
     </main>
