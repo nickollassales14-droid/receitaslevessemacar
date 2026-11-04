@@ -287,7 +287,7 @@ function Index() {
                     {o.precoAntigo && <p className="text-sm text-muted-foreground line-through">{o.precoAntigo}</p>}
                     <p className={`font-serif text-5xl font-bold ${o.destaque ? "text-accent" : "text-primary"}`}>{o.preco}</p>
                   </div>
-                  <a href={o.link} className={o.destaque ? "btn-cta w-full text-sm" : "inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-full border-2 border-primary px-6 text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"}>{o.botao}</a>
+                  <a href={o.link} target={o.link.startsWith("http") ? "_blank" : undefined} rel={o.link.startsWith("http") ? "noopener noreferrer" : undefined} className={o.destaque ? "btn-cta w-full text-sm" : "inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-full border-2 border-primary px-6 text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"}>{o.botao}</a>
                 </div>
               </Reveal>
             ))}
