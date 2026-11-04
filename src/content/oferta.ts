@@ -4,7 +4,7 @@ export const ofertas = [
   {
     id: "essencial",
     nome: "Pacote Essencial",
-    preco: "R$ 00,00", // defina o preço
+    preco: "R$ 14,90",
     precoAntigo: "", // opcional, ex: "R$ 97,00"
     itens: [
       "Coleção digital com 365 receitas",
@@ -13,13 +13,13 @@ export const ofertas = [
       "Consulta pelo celular ou computador",
     ],
     botao: "QUERO O PACOTE ESSENCIAL",
-    link: "#ofertas", // troque pelo link do checkout quando existir
+    link: "https://pay.cakto.com.br/33wqmvw_1276577",
     destaque: false,
   },
   {
     id: "completo",
     nome: "Pacote Completo",
-    preco: "R$ 00,00", // defina o preço
+    preco: "R$ 24,90",
     precoAntigo: "",
     itens: [
       "Tudo do pacote essencial",
@@ -29,7 +29,7 @@ export const ofertas = [
       "Todos os materiais complementares",
     ],
     botao: "QUERO O PACOTE COMPLETO",
-    link: "#ofertas",
+    link: "https://pay.cakto.com.br/yyp4n7z_1276637",
     destaque: true,
   },
 ];
