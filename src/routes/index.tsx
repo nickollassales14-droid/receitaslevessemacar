@@ -25,6 +25,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Coleção digital com 365 receitas deliciosas, com opções sem açúcar adicionado, sem glúten e sem lactose para variar sua rotina." },
       { property: "og:title", content: "365 Receitas Leves Sem Açúcar" },
       { property: "og:description", content: "Descubra um novo jeito de aproveitar cada receita: 365 inspirações para sua cozinha." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -120,7 +122,7 @@ function Index() {
   const scroll = (d: number) => track.current?.scrollBy({ left: d * track.current.clientWidth * 0.8, behavior: "smooth" });
 
   return (
-    <main className="overflow-x-hidden pb-20 md:pb-0">
+    <main className="overflow-x-hidden">
       {/* Barra de benefícios */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-1 px-4 py-2.5 text-xs font-medium sm:text-sm">
@@ -408,11 +410,6 @@ function Index() {
         </div>
       </footer>
 
-      {/* Barra mobile */}
-      <div className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-between gap-3 border-t border-border bg-card/95 px-4 py-2.5 backdrop-blur md:hidden">
-        <div className="leading-tight"><p className="text-xs text-muted-foreground">Coleção digital</p><p className="font-serif font-bold text-primary">365 Receitas Leves</p></div>
-        <a href="#ofertas" className="btn-cta !min-h-11 !px-5 !py-2 text-sm">Ver ofertas</a>
-      </div>
     </main>
   );
 }
