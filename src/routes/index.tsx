@@ -293,7 +293,6 @@ function Index() {
                     })}
                   </ul>
                   <div className="mt-auto pt-8 text-center">
-                    <p className="text-sm text-muted-foreground">Pagamento único</p>
                     <p className="font-serif text-5xl font-bold text-primary md:text-6xl">{o.preco}</p>
                     {o.nota && <p className="mt-3 font-semibold text-accent">{o.nota}</p>}
                     <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
