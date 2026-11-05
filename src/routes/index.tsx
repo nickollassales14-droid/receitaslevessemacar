@@ -271,23 +271,33 @@ function Index() {
       </section>
 
       {/* Ofertas */}
-      <section id="ofertas" className="scroll-mt-4 py-20">
+      <section id="ofertas" className="scroll-mt-4 bg-primary py-20 text-primary-foreground">
         <div className="mx-auto max-w-5xl px-5">
-          <Title eyebrow="Oferta" sub="Tenha mais inspiração e praticidade para descobrir novas receitas todos os dias.">Escolha a experiência ideal para você</Title>
-          <div className="grid items-center gap-8 md:grid-cols-2">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-80">Oferta</span>
+            <h2 className="mt-3 font-serif text-3xl font-bold md:text-4xl">Escolha a experiência ideal para você</h2>
+            <p className="mt-3 opacity-90">Tenha mais inspiração e praticidade para descobrir novas receitas todos os dias.</p>
+          </div>
+          <div className="grid items-stretch gap-10 md:grid-cols-2 md:gap-8">
             {ofertas.map((o) => (
-              <Reveal key={o.id} className={o.destaque ? "order-first md:order-none" : ""}>
-                <div className={`relative rounded-3xl bg-card p-8 ${o.destaque ? "border-2 border-secondary shadow-lift md:scale-105" : "border border-border shadow-soft"}`}>
-                  {o.destaque && <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-5 py-1.5 text-xs font-bold tracking-wider text-primary-foreground">PACOTE MAIS COMPLETO</span>}
-                  <h3 className="text-center text-2xl font-bold text-primary">{o.nome}</h3>
+              <Reveal key={o.id} className="h-full">
+                <div className={`relative flex h-full flex-col rounded-3xl bg-card p-7 text-card-foreground md:p-9 ${o.destaque ? "shadow-lift ring-4 ring-accent md:-translate-y-2" : "shadow-soft"}`}>
+                  {o.destaque && <span className="absolute -top-4 right-6 rounded-full bg-accent px-4 py-1.5 text-xs font-bold tracking-wider text-accent-foreground shadow-soft">MAIS COMPLETO</span>}
+                  <span className={`self-start rounded-full px-4 py-1.5 text-xs font-bold tracking-wider ${o.destaque ? "bg-primary text-primary-foreground" : "bg-secondary/15 text-primary"}`}>{o.etiqueta}</span>
+                  <h3 className="mt-5 font-serif text-2xl font-bold text-primary md:text-3xl">{o.nome}</h3>
                   <ul className="mt-6 space-y-3">
-                    {o.itens.map((it) => <li key={it} className="flex items-start gap-3 text-sm"><Check className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />{it}</li>)}
+                    {o.itens.map((it) => <li key={it} className="flex items-start gap-3"><span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-secondary/15"><Check className="h-4 w-4 text-secondary" /></span>{it}</li>)}
+                    {o.bonus.map((it) => {
+                      const [tag, txt] = it.split(": ");
+                      return <li key={it} className="flex items-start gap-3 rounded-xl bg-accent/10 p-3"><span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent text-accent-foreground"><Gift className="h-4 w-4" /></span><span><strong className="text-accent">{tag}:</strong> {txt}</span></li>;
+                    })}
                   </ul>
-                  <div className="my-6 border-t border-dashed border-border pt-6 text-center">
-                    {o.precoAntigo && <p className="text-sm text-muted-foreground line-through">{o.precoAntigo}</p>}
-                    <p className={`font-serif text-5xl font-bold ${o.destaque ? "text-accent" : "text-primary"}`}>{o.preco}</p>
+                  <div className="mt-auto pt-8 text-center">
+                    <p className="text-sm text-muted-foreground">Pagamento único</p>
+                    <p className="font-serif text-5xl font-bold text-primary md:text-6xl">{o.preco}</p>
+                    {o.nota && <p className="mt-3 font-semibold text-accent">{o.nota}</p>}
+                    <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm">{o.botao}</a>
                   </div>
-                  <a href={o.link} target={o.link.startsWith("http") ? "_blank" : undefined} rel={o.link.startsWith("http") ? "noopener noreferrer" : undefined} className={o.destaque ? "btn-cta w-full text-sm" : "inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-full border-2 border-primary px-6 text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"}>{o.botao}</a>
                 </div>
               </Reveal>
             ))}
