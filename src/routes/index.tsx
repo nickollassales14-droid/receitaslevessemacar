@@ -304,7 +304,6 @@ function Index() {
                       </div>
                     )}
                     <p className={`font-serif font-bold text-primary ${o.destaque ? "text-[3.375rem] leading-none md:text-[4.125rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
-                    {o.destaque && <span aria-hidden="true" className="mx-auto mt-5 block h-0.5 w-8 rounded-full bg-accent/70" />}
                     <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
                   </div>
                 </div>
