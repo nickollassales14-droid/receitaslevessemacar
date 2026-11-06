@@ -303,7 +303,7 @@ function Index() {
                         <p className="mt-2 text-sm leading-relaxed text-foreground">365 receitas + 3 materiais complementares</p>
                       </div>
                     )}
-                    <p className="font-serif text-5xl font-bold text-primary md:text-6xl">{o.preco}</p>
+                    <p className={`font-serif font-bold text-primary ${o.destaque ? "mx-auto w-fit border-b-2 border-accent/60 pb-2 text-[3.375rem] leading-none md:text-[4.125rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
                     <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
                   </div>
                 </div>
