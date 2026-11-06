@@ -295,8 +295,15 @@ function Index() {
                     })}
                   </ul>
                   <div className="mt-auto pt-8 text-center">
+                    {o.nota && (
+                      <div className="mb-6 rounded-xl border border-accent/50 bg-accent/10 px-4 py-5">
+                        <Gift className="mx-auto mb-3 h-6 w-6 text-accent" aria-hidden="true" />
+                        <p className="text-xs font-bold leading-relaxed text-primary">{o.nota}</p>
+                        <p className="mt-2 font-serif text-xl font-bold leading-snug text-primary">4 E-BOOKS EM UM PACOTE</p>
+                        <p className="mt-2 text-sm leading-relaxed text-foreground">365 receitas + 3 materiais complementares</p>
+                      </div>
+                    )}
                     <p className="font-serif text-5xl font-bold text-primary md:text-6xl">{o.preco}</p>
-                    {o.nota && <p className="mx-auto mt-4 flex max-w-sm items-start gap-2 rounded-2xl border border-accent/30 bg-accent/10 px-4 py-3 text-left text-sm font-semibold leading-snug text-accent md:text-base"><Gift className="mt-0.5 h-5 w-5 shrink-0" /><span>{o.nota}</span></p>}
                     <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
                   </div>
                 </div>
