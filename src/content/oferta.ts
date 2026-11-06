@@ -31,7 +31,7 @@ export const ofertas = [
       "BÔNUS 2: Lista de Compras Inteligente",
       "BÔNUS 3: Guia de Substituições",
     ],
-    nota: "Por apenas R$ 10 a mais, leve os 3 e-books bônus junto com suas 365 receitas!",
+    nota: "VOCÊ RECEBE 3 BÔNUS EXCLUSIVOS",
     botao: "QUERO O PACOTE COMPLETO",
     link: "https://pay.cakto.com.br/yyp4n7z_1276637",
     destaque: true,
