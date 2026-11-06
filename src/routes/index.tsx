@@ -3,7 +3,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import {
   Smartphone, Monitor, Tablet, Printer, ShieldCheck, Download, Check, Leaf, Wheat, Milk,
   CandyOff, Coffee, BookOpen, Utensils, Croissant, Soup, CupSoda, Sandwich, IceCream,
-  Gift, ShoppingBasket, CalendarDays, Repeat, Star, ChevronLeft, ChevronRight, MessageSquareQuote, Sparkles,
+  Gift, ShoppingBasket, CalendarDays, Repeat, Star, ChevronLeft, ChevronRight, MessageSquareQuote, Sparkles, Lock,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ofertas, depoimentos, rodape } from "@/content/oferta";
@@ -296,13 +296,18 @@ function Index() {
                   </ul>
                   <div className="mt-auto pt-8 text-center">
                     <p className="font-serif text-5xl font-bold text-primary md:text-6xl">{o.preco}</p>
-                    {o.nota && <p className="mt-3 font-semibold text-accent">{o.nota}</p>}
+                    {o.nota && <p className="mx-auto mt-4 flex max-w-sm items-start gap-2 rounded-2xl border border-accent/30 bg-accent/10 px-4 py-3 text-left text-sm font-semibold leading-snug text-accent md:text-base"><Gift className="mt-0.5 h-5 w-5 shrink-0" /><span>{o.nota}</span></p>}
                     <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
                   </div>
                 </div>
               </Reveal>
             ))}
           </div>
+          <ul className="mx-auto mt-10 flex max-w-3xl flex-col items-center justify-center gap-3 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/5 px-5 py-4 text-sm opacity-90 sm:flex-row sm:flex-wrap sm:gap-x-8">
+            <li className="flex items-center gap-2"><Lock className="h-4 w-4 shrink-0" />Pagamento seguro</li>
+            <li className="flex items-center gap-2"><Download className="h-4 w-4 shrink-0" />Acesso digital após aprovação do pagamento</li>
+            <li className="flex items-center gap-2"><Smartphone className="h-4 w-4 shrink-0" />Compatível com celular e computador</li>
+          </ul>
         </div>
       </section>
 
