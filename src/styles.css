@@ -128,3 +128,9 @@ h1,h2,h3 { font-family: var(--font-serif); }
 .reveal { opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity:1; transform:none; }
 @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} html{scroll-behavior:auto} }
+
+.purchase-notice { animation: purchase-notice-in 250ms ease-out both; }
+.purchase-notice-out { animation: purchase-notice-out 250ms ease-in both; }
+@keyframes purchase-notice-in { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes purchase-notice-out { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-12px); } }
+@media (prefers-reduced-motion: reduce) { .purchase-notice, .purchase-notice-out { animation: none; } }
