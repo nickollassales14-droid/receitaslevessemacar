@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ofertas, depoimentos, rodape } from "@/content/oferta";
+import { PurchaseNotifications } from "@/components/purchase-notifications";
 import hero from "@/assets/hero.jpg";
 import table from "@/assets/table.jpg";
 import bolo from "@/assets/r-bolo.jpg";
@@ -123,6 +124,7 @@ function Index() {
 
   return (
     <main className="overflow-x-hidden">
+      <PurchaseNotifications />
       {/* Barra de benefícios */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-1 px-4 py-2.5 text-xs font-medium sm:text-sm">

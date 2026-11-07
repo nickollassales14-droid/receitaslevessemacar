@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Purchase notifications use verified Cakto webhooks, server-only consent matching, and an anonymous RPC returning abbreviated names only; never seed purchase activity or expose customer payloads.
+- Mount purchase notifications only on the sales page, using chained randomized timers and session deduplication so checkout and other pages stay notification-free.
