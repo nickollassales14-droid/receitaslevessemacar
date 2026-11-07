@@ -171,6 +171,25 @@ function Index() {
         </div>
       </section>
 
+      {/* VSL */}
+      <section aria-label="Vídeo de apresentação da coleção" className="pb-12 md:pb-20">
+        <div className="mx-auto max-w-5xl px-5">
+          <div className="aspect-video overflow-hidden rounded-lg bg-primary shadow-soft">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/qM1FG08m3OU?controls=1&autoplay=0&playsinline=1&rel=0"
+              title="365 Receitas Leves Sem Açúcar — vídeo de apresentação"
+              width="960"
+              height="540"
+              loading="lazy"
+              className="h-full w-full border-0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Benefícios */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
