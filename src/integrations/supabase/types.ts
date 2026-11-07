@@ -14,13 +14,49 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      cakto_purchase_notifications: {
+        Row: {
+          approved_at: string | null
+          buyer_key: string
+          display_name: string
+          offer_id: string
+          order_id: string
+          received_at: string
+          revoked: boolean
+        }
+        Insert: {
+          approved_at?: string | null
+          buyer_key: string
+          display_name: string
+          offer_id: string
+          order_id: string
+          received_at?: string
+          revoked?: boolean
+        }
+        Update: {
+          approved_at?: string | null
+          buyer_key?: string
+          display_name?: string
+          offer_id?: string
+          order_id?: string
+          received_at?: string
+          revoked?: boolean
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      recent_purchase_notifications: {
+        Args: never
+        Returns: {
+          buyer_key: string
+          display_name: string
+          id: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
