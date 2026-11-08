@@ -39,9 +39,11 @@ export const ofertas = [
 ];
 
 export type Depoimento = {
+  id: string; // identificador estável, usado nas curtidas
   nome: string;
   nota: number;
   comentario: string;
+  data?: string; // data da avaliação
   foto?: string; // somente com autorização
   fotoReceita?: string;
 };

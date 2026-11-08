@@ -8,6 +8,13 @@
       "when": 1794011194940,
       "tag": "0000_cakto_purchase_notifications",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794110598087,
+      "tag": "0001_create_review_likes",
+      "breakpoints": true
     }
   ]
 }
