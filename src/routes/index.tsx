@@ -3,11 +3,12 @@ import { useEffect, useRef, type ReactNode } from "react";
 import {
   Smartphone, Monitor, Tablet, Printer, ShieldCheck, Download, Check, Leaf, Wheat, Milk,
   CandyOff, Coffee, BookOpen, Utensils, Croissant, Soup, CupSoda, Sandwich, IceCream,
-  Gift, ShoppingBasket, CalendarDays, Repeat, Star, ChevronLeft, ChevronRight, MessageSquareQuote, Sparkles, Lock,
+  Gift, ShoppingBasket, CalendarDays, Repeat, Sparkles, Lock,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ofertas, depoimentos, rodape } from "@/content/oferta";
+import { ofertas, rodape } from "@/content/oferta";
 import { PurchaseNotifications } from "@/components/purchase-notifications";
+import { ReviewsSection } from "@/components/reviews-section";
 import hero from "@/assets/hero.jpg";
 import table from "@/assets/table.jpg";
 import bolo from "@/assets/r-bolo.jpg";
@@ -120,7 +121,7 @@ const faq = [
 
 function Index() {
   const track = useRef<HTMLDivElement>(null);
-  const scroll = (d: number) => track.current?.scrollBy({ left: d * track.current.clientWidth * 0.8, behavior: "smooth" });
+  void track;
 
   return (
     <main className="overflow-x-hidden">
