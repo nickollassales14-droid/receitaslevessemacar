@@ -92,11 +92,13 @@ function ReviewCard({ d }: { d: Depoimento }) {
       {d.fotoReceita && (
         <img src={d.fotoReceita} alt={`Receita preparada por ${primeiroNome}`} loading="lazy" className="mb-4 aspect-video w-full rounded-xl object-cover" />
       )}
-      <div className="flex gap-0.5 text-accent" aria-label={`Nota ${d.nota} de 5`}>
-        {Array.from({ length: 5 }).map((_, s) => (
-          <Star key={s} className={`h-4 w-4 ${s < d.nota ? "fill-current" : "opacity-30"}`} />
-        ))}
-      </div>
+      {typeof d.nota === "number" && (
+        <div className="flex gap-0.5 text-accent" aria-label={`Nota ${d.nota} de 5`}>
+          {Array.from({ length: 5 }).map((_, s) => (
+            <Star key={s} className={`h-4 w-4 ${s < (d.nota ?? 0) ? "fill-current" : "opacity-30"}`} />
+          ))}
+        </div>
+      )}
       <p className="mt-3 flex-1 text-sm leading-relaxed">{d.comentario}</p>
       <div className="mt-5 flex items-center gap-3">
         {d.foto ? (

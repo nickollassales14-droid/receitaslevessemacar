@@ -41,7 +41,7 @@ export const ofertas = [
 export type Depoimento = {
   id: string; // identificador estável, usado nas curtidas
   nome: string;
-  nota: number;
+  nota?: number; // estrelas só aparecem quando a avaliação real informou nota
   comentario: string;
   data?: string; // data da avaliação
   foto?: string; // somente com autorização
@@ -49,7 +49,15 @@ export type Depoimento = {
 };
 
 // Adicione aqui apenas avaliações reais e autorizadas.
-export const depoimentos: Depoimento[] = [];
+export const depoimentos: Depoimento[] = [
+  {
+    id: "juliana-s",
+    nome: "Juliana S.",
+    comentario:
+      "Comprei por causa das sobremesas e já fiz brownie, brigadeiro e panqueca. Tudo simples e gostoso. Agora tenho opção quando bate vontade de doce.",
+    fotoReceita: "/__l5e/assets-v1/53093fff-f723-41f7-92d5-9277244359b5/depoimento-juliana-brownie.png",
+  },
+];
 
 export const rodape = {
   produto: "365 Receitas Leves Sem Açúcar",
