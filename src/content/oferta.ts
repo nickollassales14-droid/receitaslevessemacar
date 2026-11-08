@@ -57,6 +57,30 @@ export const depoimentos: Depoimento[] = [
       "Comprei por causa das sobremesas e já fiz brownie, brigadeiro e panqueca. Tudo simples e gostoso. Agora tenho opção quando bate vontade de doce.",
     fotoReceita: "/__l5e/assets-v1/53093fff-f723-41f7-92d5-9277244359b5/depoimento-juliana-brownie.png",
   },
+  {
+    id: "andressa-r",
+    nome: "Andressa R.",
+    comentario:
+      "Minha filha não pode consumir lactose e eu nunca sabia o que preparar para ela. Hoje consigo fazer desde bolos e tortas até sobremesas cremosas que ela adora!",
+  },
+  {
+    id: "rosilene-d",
+    nome: "Rosilene D.",
+    comentario:
+      "As receitas são super fáceis de acompanhar e levam ingredientes simples, que encontro em qualquer mercado. Já fiz a torta salgada várias vezes e todo mundo aqui em casa adorou!",
+  },
+  {
+    id: "renata-b",
+    nome: "Renata B.",
+    comentario:
+      "Gostei muito das receitas! São fáceis de fazer e usam ingredientes que a gente encontra sem dificuldade. Já fiz a torta salgada aqui em casa e todo mundo gostou. Com certeza vou fazer outras vezes!",
+  },
+  {
+    id: "ana-m",
+    nome: "Ana M.",
+    comentario:
+      "Sempre achei que bolo sem açúcar não teria o mesmo gosto, mas me surpreendi com o de cenoura! Ficou bem fofinho e gostoso. Até o pessoal aqui de casa comeu e adorou!",
+  },
 ];
 
 export const rodape = {
