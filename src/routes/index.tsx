@@ -120,8 +120,6 @@ const faq = [
 ];
 
 function Index() {
-  const track = useRef<HTMLDivElement>(null);
-  void track;
 
   return (
     <main className="overflow-x-hidden">
@@ -340,36 +338,8 @@ function Index() {
         </div>
       </section>
 
-      {/* Depoimentos */}
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Avaliações" sub="Histórias e experiências reais de pessoas que descobriram novas possibilidades na cozinha.">Veja as experiências de quem já conhece nossa coleção</Title>
-          {depoimentos.length === 0 ? (
-            <Reveal className="card-soft mx-auto max-w-xl p-10 text-center">
-              <MessageSquareQuote className="mx-auto h-10 w-10 text-secondary" />
-              <p className="mt-4 font-serif text-xl text-primary">Em breve, as experiências de quem já está cozinhando com a coleção.</p>
-              <p className="mt-2 text-sm text-muted-foreground">Estamos reunindo depoimentos reais e autorizados de compradores.</p>
-            </Reveal>
-          ) : (
-            <div className="relative">
-              <div ref={track} className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none]">
-                {depoimentos.map((d, k) => (
-                  <article key={k} className="card-soft w-[85%] shrink-0 snap-start p-6 sm:w-[45%] lg:w-[31%]">
-                    {d.fotoReceita && <img src={d.fotoReceita} alt="Receita preparada" loading="lazy" className="mb-4 aspect-video w-full rounded-xl object-cover" />}
-                    <div className="flex gap-0.5 text-accent">{Array.from({ length: 5 }).map((_, s) => <Star key={s} className={`h-4 w-4 ${s < d.nota ? "fill-current" : "opacity-30"}`} />)}</div>
-                    <p className="mt-3 text-sm">{d.comentario}</p>
-                    <div className="mt-4 flex items-center gap-3">{d.foto && <img src={d.foto} alt={d.nome} className="h-10 w-10 rounded-full object-cover" />}<span className="font-semibold text-primary">{d.nome}</span></div>
-                  </article>
-                ))}
-              </div>
-              <div className="mt-4 flex justify-center gap-3">
-                <button aria-label="Anterior" onClick={() => scroll(-1)} className="grid h-11 w-11 place-items-center rounded-full bg-card shadow-soft"><ChevronLeft /></button>
-                <button aria-label="Próximo" onClick={() => scroll(1)} className="grid h-11 w-11 place-items-center rounded-full bg-card shadow-soft"><ChevronRight /></button>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+      {/* Avaliações */}
+      <ReviewsSection />
 
       {/* Garantia */}
       <section className="py-20">
