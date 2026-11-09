@@ -153,7 +153,6 @@ function Index() {
             </div>
             <p className="mt-6 text-lg text-foreground md:text-xl">365 receitas para explorar novos sabores, preparar pratos deliciosos e deixar sua rotina na cozinha muito mais variada.</p>
             <p className="mt-3 text-muted-foreground">Uma coleção digital repleta de ideias para cafés da manhã, refeições, lanches e sobremesas, com opções sem açúcar adicionado, sem glúten e sem lactose.</p>
-            <Cta className="mt-8 w-full text-base sm:w-auto sm:text-lg">QUERO MINHAS 365 RECEITAS!</Cta>
             <ul className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
               {[[Download, "Acesso digital após a compra"], [Smartphone, "Para celular e computador"], [ShieldCheck, "Garantia de 15 dias*"]].map(([I, t], k) => {
                 const Icon = I as typeof Leaf;
