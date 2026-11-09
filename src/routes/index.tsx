@@ -303,7 +303,7 @@ function Index() {
           <div className="grid items-stretch gap-10 md:grid-cols-2 md:gap-8">
             {ofertas.map((o) => (
               <Reveal key={o.id} className="h-full">
-                <div className={`relative flex h-full flex-col rounded-3xl bg-card p-7 text-card-foreground md:p-9 ${o.destaque ? "shadow-lift ring-4 ring-accent md:-translate-y-2" : "shadow-soft"}`}>
+                <div className={`relative flex h-full flex-col rounded-3xl bg-card p-7 text-card-foreground transition-transform duration-300 md:p-9 ${o.destaque ? "shadow-lift ring-4 ring-secondary md:-translate-y-2 md:hover:-translate-y-3" : "shadow-soft hover:-translate-y-1"}`}>
                   {o.destaque && <span className="absolute -top-4 right-6 rounded-full bg-accent px-4 py-1.5 text-xs font-bold tracking-wider text-accent-foreground shadow-soft">MAIS COMPLETO</span>}
                   <span className={`self-start rounded-full px-4 py-1.5 text-xs font-bold tracking-wider ${o.destaque ? "bg-primary text-primary-foreground" : "bg-secondary/15 text-primary"}`}>{o.etiqueta}</span>
                   <h3 className="mt-5 font-serif text-2xl font-bold text-primary md:text-3xl">{o.nome}</h3>
@@ -324,7 +324,7 @@ function Index() {
                       </div>
                     )}
                     <p className={`font-serif font-bold text-primary ${o.destaque ? "text-[3.375rem] leading-none md:text-[4.125rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
-                    <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 w-full text-sm !bg-primary !bg-none text-primary-foreground">{o.botao}</a>
+                    <a href={o.link} target="_blank" rel="noopener noreferrer" className="btn-cta mt-6 min-h-[3.5rem] w-full !bg-primary !bg-none text-base font-bold text-primary-foreground transition-all duration-200 hover:brightness-110 active:scale-[0.98]">{o.botao}</a>
                   </div>
                 </div>
               </Reveal>
