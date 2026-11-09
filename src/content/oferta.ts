@@ -6,7 +6,7 @@ export const ofertas = [
     etiqueta: "VERSÃO BÁSICA",
     nome: "365 Receitas Leves Sem Açúcar",
     preco: "R$ 14,90",
-    precoAntigo: "",
+    precoAntigo: "R$ 47,90",
     itens: [
       "365 receitas leves sem açúcar adicionado",
       "Receitas doces e salgadas",
@@ -24,7 +24,7 @@ export const ofertas = [
     etiqueta: "PACOTE COMPLETO",
     nome: "365 Receitas + 3 Bônus",
     preco: "R$ 24,90",
-    precoAntigo: "",
+    precoAntigo: "R$ 97,90",
     itens: ["Tudo da versão básica"],
     bonus: [
       "BÔNUS 1: Cardápio de 30 Dias",
