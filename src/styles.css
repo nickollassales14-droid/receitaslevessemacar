@@ -48,6 +48,9 @@
   --color-ring-offset-background: var(--background);
   --color-navy: var(--navy);
   --color-cream: var(--cream);
+  --color-offer-coral: var(--offer-coral);
+  --color-offer-coral-foreground: var(--offer-coral-foreground);
+  --shadow-offer-featured: var(--shadow-offer-featured);
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --shadow-soft: var(--shadow-soft);
@@ -85,6 +88,9 @@
   --accent-foreground: oklch(0.99 0.005 85);
   --navy: oklch(0.31 0.06 250);
   --cream: oklch(0.995 0.006 90);
+  --offer-coral: oklch(0.51 0.155 28);
+  --offer-coral-foreground: oklch(0.995 0 0);
+  --shadow-offer-featured: 0 22px 48px -16px oklch(0.2 0.035 150 / 0.5);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.89 0.02 80);
