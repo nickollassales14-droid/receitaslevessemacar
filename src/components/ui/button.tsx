@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        offer: "bg-secondary text-secondary-foreground shadow-soft hover:bg-secondary/90 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.98]",
+        offer: "bg-offer-green text-offer-green-foreground shadow-soft hover:bg-offer-green/90 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.98]",
         offerComplete: "bg-offer-green text-offer-green-foreground shadow-soft hover:bg-offer-green/90 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.98]",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
