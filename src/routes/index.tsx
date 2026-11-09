@@ -317,7 +317,7 @@ function Index() {
                   <div className="pt-6 text-center">
                     {o.nota && (
                       <>
-                        <div className="mb-4 rounded-lg border border-offer-green/25 bg-offer-green/5 px-3 py-3">
+                        <div className="mb-4 rounded-lg border border-offer-green/25 bg-offer-green-soft px-3 py-3">
                           <p className="flex items-center justify-center gap-2 text-sm font-bold text-primary"><Gift className="h-4 w-4 shrink-0 text-offer-green" aria-hidden="true" />4 MATERIAIS DIGITAIS</p>
                           <p className="mt-1 text-xs leading-relaxed text-foreground sm:text-sm">365 receitas + 3 materiais complementares</p>
                         </div>
