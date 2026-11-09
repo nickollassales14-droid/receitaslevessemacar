@@ -303,28 +303,28 @@ function Index() {
           <div className="grid items-center gap-10 md:grid-cols-2 md:gap-8">
             {ofertas.map((o) => (
               <Reveal key={o.id}>
-                <article className={`relative flex flex-col rounded-3xl bg-cream px-6 pb-7 pt-8 text-card-foreground sm:px-8 md:pb-8 md:pt-9 ${o.destaque ? "shadow-offer-featured ring-2 ring-offer-coral" : "border border-border shadow-soft"}`}>
-                  {o.destaque && <span className="absolute -top-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-offer-coral px-4 py-2 text-xs font-bold text-offer-coral-foreground shadow-soft"><Star className="h-3.5 w-3.5 fill-current" aria-hidden="true" />MELHOR CUSTO-BENEFÍCIO</span>}
+                <article className={`relative flex flex-col rounded-3xl bg-cream px-6 pb-7 pt-8 text-card-foreground sm:px-8 md:pb-8 md:pt-9 ${o.destaque ? "shadow-offer-featured ring-2 ring-offer-green" : "border border-border shadow-soft"}`}>
+                  {o.destaque && <span className="absolute -top-4 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-offer-green px-4 py-2 text-xs font-bold text-offer-green-foreground shadow-soft"><Star className="h-3.5 w-3.5 fill-current" aria-hidden="true" />MELHOR CUSTO-BENEFÍCIO</span>}
                   <span className="self-start text-xs font-bold text-secondary">{o.etiqueta}</span>
                   <h3 className="mt-3 font-serif text-2xl font-bold leading-tight text-primary md:text-3xl">{o.nome}</h3>
                   <ul className="mt-5 space-y-3 text-sm leading-relaxed sm:text-base">
                     {o.itens.map((it) => <li key={it} className="flex items-start gap-3"><span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-secondary/15"><Check className="h-4 w-4 text-secondary" /></span>{it}</li>)}
                     {o.bonus.map((it) => {
                       const [tag, txt] = it.split(": ");
-                      return <li key={it} className="flex items-start gap-3"><span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-offer-coral/10"><Gift className="h-4 w-4 text-offer-coral" /></span><span><span className="sr-only">{tag}: </span>{txt}</span></li>;
+                      return <li key={it} className="flex items-start gap-3"><span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-offer-green/10"><Gift className="h-4 w-4 text-offer-green" /></span><span><span className="sr-only">{tag}: </span>{txt}</span></li>;
                     })}
                   </ul>
                   <div className="pt-6 text-center">
                     {o.nota && (
                       <>
-                        <div className="mb-4 rounded-lg border border-offer-coral/25 bg-offer-coral/5 px-3 py-3">
-                          <p className="flex items-center justify-center gap-2 text-sm font-bold text-primary"><Gift className="h-4 w-4 shrink-0 text-offer-coral" aria-hidden="true" />4 MATERIAIS DIGITAIS</p>
+                        <div className="mb-4 rounded-lg border border-offer-green/25 bg-offer-green/5 px-3 py-3">
+                          <p className="flex items-center justify-center gap-2 text-sm font-bold text-primary"><Gift className="h-4 w-4 shrink-0 text-offer-green" aria-hidden="true" />4 MATERIAIS DIGITAIS</p>
                           <p className="mt-1 text-xs leading-relaxed text-foreground sm:text-sm">365 receitas + 3 materiais complementares</p>
                         </div>
                         <p className="mx-auto mb-4 max-w-xs text-sm font-semibold leading-relaxed text-primary">{o.nota}</p>
                       </>
                     )}
-                    <p className={`font-serif font-bold text-primary ${o.destaque ? "text-[3.375rem] leading-none md:text-[4.125rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
+                    <p className={`font-sans font-black tracking-[-0.045em] text-primary ${o.destaque ? "text-[3.5rem] leading-none md:text-[4.25rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
                     <Button asChild variant={o.destaque ? "offerComplete" : "offer"} className="mt-5 h-auto min-h-14 w-full whitespace-normal rounded-lg px-3 py-4 text-sm font-bold leading-snug transition-all duration-200 sm:text-base"><a href={o.link} target="_blank" rel="noopener noreferrer">{o.botao}</a></Button>
                   </div>
                 </article>
