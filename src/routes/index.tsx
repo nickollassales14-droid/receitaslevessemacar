@@ -324,7 +324,7 @@ function Index() {
                         <p className="mx-auto mb-4 max-w-xs text-sm font-semibold leading-relaxed text-primary">{o.nota}</p>
                       </>
                     )}
-                    <p className={`font-sans font-black tracking-[-0.05em] text-offer-green ${o.destaque ? "text-[3.5rem] leading-none md:text-[4.25rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
+                    <p className={`font-sans font-black tracking-[-0.05em] [-webkit-text-stroke:0.55px_currentColor] text-offer-green ${o.destaque ? "text-[3.5rem] leading-none md:text-[4.25rem]" : "text-5xl md:text-6xl"}`}>{o.preco}</p>
                     <Button asChild variant={o.destaque ? "offerComplete" : "offer"} className="mt-5 h-auto min-h-14 w-full whitespace-normal rounded-lg px-3 py-4 text-sm font-bold leading-snug transition-all duration-200 sm:text-base"><a href={o.link} target="_blank" rel="noopener noreferrer">{o.botao}</a></Button>
                   </div>
                 </article>
