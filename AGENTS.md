@@ -11,3 +11,4 @@
 
 - Purchase notifications use verified Cakto webhooks, server-only consent matching, and an anonymous RPC returning abbreviated names only; never seed purchase activity or expose customer payloads.
 - Mount purchase notifications only on the sales page, using chained randomized timers and session deduplication so checkout and other pages stay notification-free.
+- Offer checkout links use the shared Button with dedicated offer variants and global semantic tokens, keeping CTA hierarchy isolated from other page buttons.
