@@ -146,8 +146,7 @@ function Index() {
           <div className="text-center lg:text-left">
             <p className="eyebrow mb-4">365 Receitas Leves Sem Açúcar</p>
             <h1 className="text-4xl font-bold leading-[1.08] sm:text-5xl xl:text-6xl">
-              <span className="text-[#238B63]">Descubra um novo jeito de</span>{" "}
-              <span className="text-[#E879A8]">aproveitar cada receita!</span>
+              365 Receitas Deliciosas Para Transformar Sua Rotina na Cozinha!
             </h1>
             <div className="mt-8 lg:hidden">
               <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
