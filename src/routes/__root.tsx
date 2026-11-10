@@ -14,6 +14,34 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+type MetaEventName = "PageView" | "ViewContent" | "InitiateCheckout";
+type MetaCustomData = { content_name: string; content_type: "product" };
+type MetaWindow = Window & {
+  fbq?: (...args: unknown[]) => void;
+  __metaPixelLastPageView?: string;
+  __metaPixelViewContentSent?: boolean;
+};
+
+function trackMetaEvent(eventName: MetaEventName, customData?: MetaCustomData) {
+  const pixelWindow = window as MetaWindow;
+  const eventId = crypto.randomUUID();
+  const eventSourceUrl = `${window.location.origin}${window.location.pathname}`;
+  pixelWindow.fbq?.("track", eventName, customData ?? {}, { eventID: eventId });
+
+  void fetch("/api/public/meta-capi", {
+    method: "POST",
+    credentials: "same-origin",
+    keepalive: true,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      eventName,
+      eventId,
+      eventSourceUrl,
+      ...(customData ? { customData } : {}),
+    }),
+  }).catch(() => undefined);
+}
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -131,17 +159,42 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const currentUrl = useRouterState({ select: (state) => state.location.href });
+  const currentPath = useRouterState({ select: (state) => state.location.pathname });
 
   useEffect(() => {
-    const pixelWindow = window as Window & {
-      fbq?: (...args: unknown[]) => void;
-      __metaPixelLastPageView?: string;
+    const pixelWindow = window as MetaWindow;
+    if (pixelWindow.__metaPixelLastPageView !== currentPath) {
+      pixelWindow.__metaPixelLastPageView = currentPath;
+      trackMetaEvent("PageView");
+    }
+
+    if (currentPath !== "/") {
+      pixelWindow.__metaPixelViewContentSent = false;
+    } else if (!pixelWindow.__metaPixelViewContentSent) {
+      pixelWindow.__metaPixelViewContentSent = true;
+      trackMetaEvent("ViewContent", {
+        content_name: "365 Receitas Leves Sem Açúcar",
+        content_type: "product",
+      });
+    }
+  }, [currentPath]);
+
+  useEffect(() => {
+    const handleCheckoutClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const checkoutLink = target.closest<HTMLAnchorElement>("#ofertas a[href]");
+      if (!checkoutLink) return;
+
+      trackMetaEvent("InitiateCheckout", {
+        content_name: "365 Receitas Leves Sem Açúcar",
+        content_type: "product",
+      });
     };
-    if (!pixelWindow.fbq || pixelWindow.__metaPixelLastPageView === currentUrl) return;
-    pixelWindow.__metaPixelLastPageView = currentUrl;
-    pixelWindow.fbq("track", "PageView");
-  }, [currentUrl]);
+
+    document.addEventListener("click", handleCheckoutClick, true);
+    return () => document.removeEventListener("click", handleCheckoutClick, true);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
