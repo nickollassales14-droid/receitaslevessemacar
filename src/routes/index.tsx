@@ -146,20 +146,14 @@ function Index() {
           <div className="text-center lg:text-left">
             <p className="eyebrow mb-4">365 Receitas Leves Sem Açúcar</p>
             <h1 className="text-4xl font-bold leading-[1.08] text-primary sm:text-5xl xl:text-6xl">
-              Descubra um novo jeito de <span className="italic text-accent">aproveitar cada receita!</span>
+              365 Receitas Deliciosas Para Transformar Sua Rotina na Cozinha!
             </h1>
             <div className="mt-8 lg:hidden">
               <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
             </div>
-            <p className="mt-6 text-lg text-foreground md:text-xl">365 receitas para explorar novos sabores, preparar pratos deliciosos e deixar sua rotina na cozinha muito mais variada.</p>
-            <p className="mt-3 text-muted-foreground">Uma coleção digital repleta de ideias para cafés da manhã, refeições, lanches e sobremesas, com opções sem açúcar adicionado, sem glúten e sem lactose.</p>
-            <ul className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
-              {[[Download, "Acesso digital após a compra"], [Smartphone, "Para celular e computador"], [ShieldCheck, "Garantia de 15 dias*"]].map(([I, t], k) => {
-                const Icon = I as typeof Leaf;
-                return <li key={k} className="flex items-center justify-center gap-2 lg:justify-start"><span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-card text-secondary shadow-soft"><Icon className="h-4 w-4" /></span>{t as string}</li>;
-              })}
-            </ul>
-            <p className="mt-3 text-xs text-muted-foreground">*Conforme as condições informadas na oferta.</p>
+            <p className="mt-6 text-lg text-foreground md:text-xl">Descubra bolos, pães, sobremesas, lanches e refeições em versões sem açúcar adicionado, sem glúten e sem lactose.</p>
+            <p className="mt-7 font-sans text-3xl font-black tracking-tight text-offer-green sm:text-4xl">A partir de R$ 14,90</p>
+            <p className="mt-4 text-sm font-medium text-muted-foreground sm:text-base">Acesso digital <span className="mx-2 text-secondary">•</span> Receitas doces e salgadas <span className="mx-2 text-secondary">•</span> 15 dias de garantia</p>
           </div>
           <div className="relative hidden lg:block">
             <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-muted" />
