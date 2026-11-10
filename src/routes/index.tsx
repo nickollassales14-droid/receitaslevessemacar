@@ -145,13 +145,14 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:py-20 lg:grid-cols-2">
           <div className="text-center lg:text-left">
             <p className="eyebrow mb-4">365 Receitas Leves Sem Açúcar</p>
-            <h1 className="text-4xl font-bold leading-[1.08] sm:text-5xl xl:text-6xl">
+            <h1 className="text-4xl font-bold leading-[1.08] text-primary sm:text-5xl xl:text-6xl">
               365 Receitas Deliciosas Para Transformar Sua Rotina na Cozinha!
             </h1>
             <div className="mt-8 lg:hidden">
               <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
             </div>
             <p className="mt-6 text-lg text-foreground md:text-xl">Descubra bolos, pães, sobremesas, lanches e refeições em versões sem açúcar adicionado, sem glúten e sem lactose.</p>
+            <p className="mt-7 font-sans text-3xl font-black tracking-tight text-offer-green sm:text-4xl">A partir de R$ 14,90</p>
             <p className="mt-4 text-sm font-medium text-muted-foreground sm:text-base">Acesso digital <span className="mx-2 text-secondary">•</span> Receitas doces e salgadas <span className="mx-2 text-secondary">•</span> 15 dias de garantia</p>
           </div>
           <div className="relative hidden lg:block">
