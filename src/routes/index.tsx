@@ -102,32 +102,26 @@ function Index() {
   return (
     <main className='overflow-x-hidden'>
       <PurchaseNotifications />
-      <div className='border-b border-border bg-card'>
-        <div className='mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-2 text-xs font-medium text-primary sm:text-sm'>
-          <Leaf className='h-4 w-4 shrink-0 text-secondary' aria-hidden='true' />
-          <span>365 Receitas Leves Sem Açúcar</span>
-        </div>
+      <div className='bg-primary px-4 py-2 text-center text-xs font-bold tracking-wide text-primary-foreground sm:text-sm'>
+        <p>⏰ A PROMOÇÃO DESSA PÁGINA ACABA NO DIA 10/11/2026</p>
       </div>
 
-      <section className='bg-background'>
-        <div className='mx-auto grid max-w-6xl items-center gap-5 px-5 py-5 sm:py-8 md:grid-cols-2 md:gap-10 md:px-8 md:py-12'>
-          <div className='text-center md:text-left'>
-            <p className='mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-secondary'>Coleção digital</p>
-            <h1 className='text-[1.75rem] font-bold leading-tight text-primary sm:text-4xl md:text-5xl'>365 ideias para variar sua rotina na cozinha</h1>
-            <p className='mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base md:mx-0'>Receitas doces e salgadas com opções sem açúcar adicionado, sem glúten e sem lactose.</p>
-            <div className='mx-auto mt-4 max-w-sm overflow-hidden rounded-xl md:mx-0 md:hidden'>
-              <img src={hero} alt='Coleção 365 Receitas Leves Sem Açúcar' width={1280} height={1152} className='h-36 w-full object-cover object-center sm:h-48' />
-            </div>
-            <p className='mt-4 text-sm font-medium text-muted-foreground'>Opções a partir de <span className='font-bold text-primary'>R$ 14,90</span></p>
-            <Cta className='mt-3 w-full sm:w-auto'>Ver opções da coleção <span aria-hidden='true'>↓</span></Cta>
-            <div className='mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground md:justify-start sm:text-sm'>
-              <span className='inline-flex items-center gap-1.5'><Download className='h-4 w-4 text-secondary' />Acesso digital</span>
-              <span className='inline-flex items-center gap-1.5'><ShieldCheck className='h-4 w-4 text-secondary' />15 dias de garantia</span>
-            </div>
+      <section className='bg-background px-5 py-6 sm:py-9 md:px-8 md:py-12'>
+        <div className='mx-auto flex max-w-5xl flex-col items-center text-center'>
+          <p className='mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-secondary'>Coleção digital</p>
+          <h1 className='max-w-4xl text-[1.75rem] font-bold leading-tight text-primary sm:text-4xl md:text-5xl'>365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose</h1>
+          <p className='mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg'>Receitas práticas para comer bem todos os dias sem abrir mão do prazer à mesa.</p>
+          <div className='mt-5 flex w-full max-w-4xl items-center justify-center overflow-hidden rounded-xl bg-card sm:mt-7'>
+            <img src={hero} alt='Coleção 365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose' width={1280} height={1152} fetchPriority='high' className='h-auto max-h-[24rem] w-full object-contain sm:max-h-[30rem]' />
           </div>
-          <div className='hidden md:block'>
-            <img src={hero} alt='Coleção 365 Receitas Leves Sem Açúcar' width={1280} height={1152} className='mx-auto max-h-[28rem] w-full rounded-2xl object-cover' />
-          </div>
+          <p className='mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base'>Bolos, pães, sobremesas, lanches e refeições em versões leves e deliciosas para transformar sua rotina.</p>
+          <p className='mt-3 text-sm font-medium text-muted-foreground'>Opções a partir de <span className='font-bold text-primary'>R$ 14,90</span></p>
+          <Cta className='mt-4 min-h-14 w-full px-6 py-4 text-base font-bold sm:w-auto sm:min-w-72'>QUERO AS 365 RECEITAS!</Cta>
+          <ul className='mt-4 flex w-full max-w-3xl flex-col items-center gap-2 text-xs font-medium text-muted-foreground sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6 sm:text-sm'>
+            <li className='flex items-center gap-2'><Download className='h-4 w-4 shrink-0 text-secondary' aria-hidden='true' />Acesso digital</li>
+            <li className='flex items-center gap-2'><Lock className='h-4 w-4 shrink-0 text-secondary' aria-hidden='true' />Compra segura no checkout</li>
+            <li className='flex items-center gap-2'><ShieldCheck className='h-4 w-4 shrink-0 text-secondary' aria-hidden='true' />15 dias de garantia</li>
+          </ul>
         </div>
       </section>
 
