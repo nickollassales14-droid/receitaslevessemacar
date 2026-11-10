@@ -163,6 +163,21 @@ function Index() {
         </div>
       </section>
 
+      {/* Convite para explorar */}
+      <section className="px-5 pb-12 md:pb-16" aria-label="Explore a coleção">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-border bg-card shadow-soft">
+          <div className="flex flex-col items-center gap-5 px-6 py-8 text-center sm:px-10 sm:py-10 md:flex-row md:justify-between md:gap-8 md:text-left">
+            <div className="max-w-2xl">
+              <p className="eyebrow mb-2">Explore nossa coleção!</p>
+              <p className="text-lg font-semibold leading-relaxed text-primary sm:text-xl">Continue descendo a página e descubra as receitas, os materiais extras e tudo o que preparamos para você.</p>
+            </div>
+            <a href="#galeria" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+              Continue explorando <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* VSL */}
       <section aria-label="Vídeo de apresentação da coleção" className="pb-12 md:pb-20">
         <div className="mx-auto max-w-5xl px-5">
@@ -200,7 +215,7 @@ function Index() {
       </section>
 
       {/* Galeria */}
-      <section className="py-20">
+      <section id="galeria" className="scroll-mt-6 py-20">
         <div className="mx-auto max-w-7xl px-5">
           <Title eyebrow="Uma prévia da coleção" sub="Explore algumas das delícias que fazem parte da nossa coleção.">Qual delas você vai preparar primeiro?</Title>
           <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
