@@ -134,6 +134,13 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
         <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          async
+          defer
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
