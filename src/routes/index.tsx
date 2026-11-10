@@ -152,7 +152,10 @@ function Index() {
               <img src={hero} alt="Coleção 365 Receitas Leves Sem Açúcar com smartphone, chef sorrindo e pratos saudáveis" width={1280} height={1152} className="w-full rounded-3xl shadow-lift" />
             </div>
             <p className="mt-6 text-lg text-foreground md:text-xl">Descubra bolos, pães, sobremesas, lanches e refeições em versões sem açúcar adicionado, sem glúten e sem lactose.</p>
-            <p className="mt-7 font-sans text-3xl font-black tracking-tight text-offer-green sm:text-4xl">A partir de R$ 14,90</p>
+            <div className="mt-7 inline-flex flex-col items-center rounded-2xl border border-offer-green/20 bg-offer-green-soft px-6 py-4 shadow-soft sm:px-8 lg:items-start">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary/75">Invista na sua coleção</span>
+              <p className="mt-1 font-sans text-3xl font-black tracking-tight text-offer-green sm:text-4xl">A partir de R$ 14,90</p>
+            </div>
             <p className="mt-4 text-sm font-medium text-muted-foreground sm:text-base">Acesso digital <span className="mx-2 text-secondary">•</span> Receitas doces e salgadas <span className="mx-2 text-secondary">•</span> 15 dias de garantia</p>
           </div>
           <div className="relative hidden lg:block">
