@@ -89,8 +89,8 @@ export const depoimentos: Depoimento[] = [
 
 export const rodape = {
   produto: "365 Receitas Leves Sem Açúcar",
-  privacidade: "#",
-  termos: "#",
-  reembolso: "#",
-  suporte: "#", // ex: "mailto:seu@email.com"
+  privacidade: "/privacidade",
+  termos: "/termos",
+  reembolso: "/reembolso",
+  suporte: "/suporte",
 };
