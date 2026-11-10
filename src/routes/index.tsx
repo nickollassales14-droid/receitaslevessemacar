@@ -114,14 +114,13 @@ const faq = [
   ["Os ingredientes são fáceis de encontrar?", "A proposta é priorizar ingredientes comuns. Algumas receitas podem usar itens específicos, como farinhas sem glúten, encontrados em mercados e lojas de produtos naturais."],
   ["A coleção tem receitas doces e salgadas?", "Sim. São 365 receitas com opções para café da manhã, almoço, jantar, lanches, sobremesas, molhos e bebidas."],
   ["Posso imprimir as receitas?", "Sim, você pode imprimir as páginas que desejar para uso pessoal."],
-  ["Por quanto tempo terei acesso?", "O acesso segue as condições informadas na oferta. Por ser um arquivo digital, você pode guardá-lo em seus dispositivos."],
-  ["Como funciona a garantia?", "Você tem 15 dias para conhecer o material. Consulte a política de reembolso para saber como solicitar dentro do prazo aplicável."],
+  ["Por quanto tempo terei acesso?", "A oferta dá acesso à coleção digital conforme o formato e as condições exibidos no checkout. Depois de baixar o arquivo, você pode guardá-lo em seus dispositivos; a disponibilidade de um novo download depende do canal de entrega."],
+  ["Como funciona a garantia?", "A oferta informa 15 dias de garantia. Para consultar as condições e solicitar o reembolso dentro do prazo, acesse a política de reembolso ou o canal de suporte indicado na confirmação da compra."],
   ["A coleção é indicada para pessoas com doença celíaca?", "As receitas sem glúten são elaboradas sem ingredientes que contêm glúten, mas a coleção não substitui orientação profissional. Pessoas com doença celíaca, alergias ou condições de saúde devem verificar rótulos (risco de contaminação cruzada) e consultar um médico ou nutricionista."],
   ["Sem açúcar significa sem açúcares naturais?", "Não. \"Sem açúcar\" significa sem açúcar adicionado. Ingredientes como frutas e leites vegetais podem conter açúcares naturais. \"Sem glúten\" e \"sem lactose\" referem-se à ausência desses componentes nos ingredientes indicados."],
 ];
 
 function Index() {
-
   return (
     <main className="overflow-x-hidden">
       <PurchaseNotifications />
@@ -155,6 +154,7 @@ function Index() {
             <div className="mt-7 inline-flex flex-col items-center rounded-2xl border border-offer-green/20 bg-offer-green-soft px-6 py-4 shadow-soft sm:px-8 lg:items-start">
               <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary/75">Invista na sua coleção</span>
               <p className="mt-1 font-sans text-3xl font-black tracking-tight text-offer-green sm:text-4xl">A partir de R$ 14,90</p>
+              <a href="#ofertas" className="mt-2 inline-flex min-h-9 items-center justify-center gap-1.5 rounded-full border border-offer-green/30 px-4 py-1.5 text-xs font-semibold text-primary transition-colors hover:bg-offer-green/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Ver opções da coleção <span aria-hidden="true">↓</span></a>
             </div>
             <p className="mt-4 text-sm font-medium text-muted-foreground sm:text-base">Acesso digital <span className="mx-2 text-secondary">•</span> Receitas doces e salgadas <span className="mx-2 text-secondary">•</span> 15 dias de garantia</p>
           </div>
@@ -345,7 +345,7 @@ function Index() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-primary md:text-3xl">Sua compra com mais tranquilidade</h2>
-            <p className="mt-3 text-muted-foreground">Você conta com um prazo de 15 dias de garantia, conforme as condições da oferta. Queremos que você tenha segurança para conhecer o material.</p>
+            <p className="mt-3 text-muted-foreground">A oferta informa um prazo de 15 dias de garantia. Consulte as condições e o canal para solicitar na política de reembolso.</p>
             <a href={rodape.reembolso} className="mt-4 inline-block text-sm font-semibold text-secondary underline underline-offset-4">Ver política de reembolso</a>
           </div>
         </Reveal>
