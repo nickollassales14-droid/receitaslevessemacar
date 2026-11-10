@@ -61,12 +61,12 @@ const Title = ({ eyebrow, children, sub }: { eyebrow?: string; children: ReactNo
 );
 
 const beneficios = [
-  { i: Utensils, t: "Ideias para diferentes refeições" },
-  { i: CandyOff, t: "Opções sem açúcar adicionado" },
-  { i: Wheat, t: "Preparações sem glúten" },
-  { i: Milk, t: "Alternativas sem lactose" },
-  { i: BookOpen, t: "Receitas doces e salgadas" },
-  { i: Sparkles, t: "Conteúdo organizado para facilitar sua consulta" },
+  { i: Utensils, t: "Inspiração para cada refeição", d: "Encontre ideias para o café da manhã, almoço, jantar e aqueles momentos entre uma refeição e outra." },
+  { i: CandyOff, t: "Receitas sem açúcar adicionado", d: "Explore preparações saborosas feitas sem adição de açúcar, com ingredientes que já podem fazer parte da sua cozinha." },
+  { i: Wheat, t: "Alternativas sem glúten", d: "Descubra opções variadas para preparar pães, bolos e pratos sem ingredientes com glúten." },
+  { i: Milk, t: "Opções sem lactose", d: "Tenha novas ideias para adaptar sua rotina com preparações sem ingredientes com lactose." },
+  { i: BookOpen, t: "Doces e salgados para escolher", d: "Alterne entre sobremesas, lanches e receitas para as refeições, tudo reunido em uma só coleção." },
+  { i: Sparkles, t: "Tudo organizado para facilitar", d: "Consulte receitas separadas por categorias e encontre com mais facilidade uma ideia para preparar." },
 ];
 
 const receitas = [
@@ -185,13 +185,13 @@ function Index() {
       {/* Benefícios */}
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <Title eyebrow="Por que você vai amar" sub="Chega de ficar sem ideias na hora de cozinhar! Tenha uma coleção completa de inspirações para descobrir novas combinações e preparar receitas para diferentes momentos do seu dia.">Mais variedade para sua rotina, mais sabor em cada preparação</Title>
+          <Title eyebrow="Mais possibilidades na sua cozinha" sub="São 365 ideias para inspirar sua rotina, descobrir novos sabores e encontrar opções para diferentes momentos do dia.">Variedade para cozinhar com mais leveza e criatividade</Title>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {beneficios.map(({ i: I, t }, k) => (
+            {beneficios.map(({ i: I, t, d }, k) => (
               <Reveal key={k}>
                 <div className="card-soft flex h-full flex-col items-start gap-4 p-6">
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-muted text-secondary"><I className="h-6 w-6" /></span>
-                  <p className="font-medium text-foreground">{t}</p>
+                  <div><h3 className="font-semibold text-primary">{t}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p></div>
                 </div>
               </Reveal>
             ))}
