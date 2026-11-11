@@ -142,3 +142,235 @@ h1,h2,h3 { font-family: var(--font-serif); }
 @keyframes purchase-notice-in { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes purchase-notice-out { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-12px); } }
 @media (prefers-reduced-motion: reduce) { .purchase-notice, .purchase-notice-out { animation: none; } }
+
+
+/* Sales page visual refinement — scoped to the storefront route. */
+.sales-page {
+  --sales-forest: oklch(0.39 0.065 158);
+  --sales-forest-deep: oklch(0.32 0.065 158);
+  --sales-sage: oklch(0.94 0.025 151);
+  --sales-cream: oklch(0.985 0.014 82);
+  background: var(--sales-cream);
+  color: var(--foreground);
+}
+
+.sales-page h1,
+.sales-page h2,
+.sales-page h3,
+.sales-page h4 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.035em;
+}
+
+.sales-page > section {
+  position: relative;
+  isolation: isolate;
+}
+
+.sales-page .sales-hero {
+  background: #fff;
+  padding-top: clamp(2rem, 5vw, 4.25rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.sales-page .sales-hero h1 {
+  max-width: 880px;
+  font-size: clamp(2rem, 5vw, 3.65rem);
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.sales-page .sales-hero > div > div {
+  max-width: 760px;
+  border: 1px solid oklch(0.91 0.025 150);
+  border-radius: 1.35rem;
+  background: #fff;
+  box-shadow: 0 18px 48px -30px oklch(0.25 0.06 155 / 0.42);
+}
+
+.sales-page .sales-hero img {
+  max-height: min(34rem, 78vw);
+}
+
+.sales-page .sales-hero a[href="#ofertas"],
+.sales-page a[href="#ofertas"] {
+  min-height: 3.25rem;
+  border-radius: 0.8rem;
+  background: var(--sales-forest);
+  box-shadow: 0 8px 18px -12px oklch(0.25 0.06 155 / 0.7);
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.sales-page .sales-hero a[href="#ofertas"]:hover,
+.sales-page a[href="#ofertas"]:hover {
+  transform: translateY(-2px);
+  background: var(--sales-forest-deep);
+  box-shadow: 0 12px 22px -12px oklch(0.25 0.06 155 / 0.58);
+}
+
+.sales-page a:focus-visible,
+.sales-page button:focus-visible {
+  outline: 3px solid oklch(0.68 0.12 75);
+  outline-offset: 3px;
+}
+
+.sales-page .sales-benefits > div {
+  border: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 0.75rem;
+}
+
+.sales-page .sales-benefits > div > div {
+  min-height: 4.25rem;
+  border: 1px solid oklch(0.9 0.025 150);
+  border-radius: 0.9rem;
+  background: #fff;
+  padding: 0.8rem 0.65rem;
+  box-shadow: 0 5px 18px -16px oklch(0.2 0.04 150 / 0.5);
+}
+
+.sales-page .sales-gallery {
+  background: #fff;
+}
+
+.sales-page .sales-gallery article,
+.sales-page .sales-categories > div > div,
+.sales-page .sales-bonus article {
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 8px 24px -19px oklch(0.2 0.04 150 / 0.42);
+}
+
+.sales-page .sales-gallery article {
+  border: 1px solid oklch(0.91 0.018 145);
+}
+
+.sales-page .sales-gallery article img {
+  aspect-ratio: 1.18;
+}
+
+.sales-page .sales-categories {
+  background: var(--sales-sage);
+}
+
+.sales-page .sales-categories > div > div {
+  margin-block: 0.55rem;
+  border: 1px solid oklch(0.9 0.025 150);
+  padding-inline: 1rem;
+}
+
+.sales-page .sales-bonus {
+  background: #fff;
+}
+
+.sales-page .sales-bonus article {
+  border: 1px solid oklch(0.91 0.018 145);
+  padding: 1.2rem;
+}
+
+.sales-page .sales-offers {
+  background: var(--sales-forest-deep);
+}
+
+.sales-page .sales-offers h2,
+.sales-page .sales-offers .text-primary {
+  color: #fff;
+}
+
+.sales-page .sales-offers .text-muted-foreground {
+  color: oklch(0.88 0.025 145);
+}
+
+.sales-page .sales-offers article {
+  border: 1px solid oklch(0.91 0.018 145);
+  border-radius: 1.15rem;
+  background: #fff;
+  color: var(--foreground);
+  box-shadow: 0 18px 38px -28px oklch(0.12 0.04 150 / 0.6);
+}
+
+.sales-page .sales-offers article .text-primary {
+  color: var(--primary);
+}
+
+.sales-page .sales-offers article .text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.sales-page .sales-offers article:has(.bg-offer-green-soft) {
+  border-color: oklch(0.7 0.1 150);
+  box-shadow: 0 18px 38px -24px oklch(0.12 0.04 150 / 0.65);
+}
+
+.sales-page .sales-offers article a {
+  min-height: 3.25rem;
+  border-radius: 0.75rem;
+  white-space: normal;
+}
+
+.sales-page .sales-trust {
+  background: #fff;
+}
+
+.sales-page .sales-faq {
+  background: var(--sales-cream);
+}
+
+.sales-page .sales-faq [data-state="open"] {
+  border-color: oklch(0.78 0.06 150);
+}
+
+.sales-page footer {
+  border-top: 1px solid oklch(0.9 0.02 145);
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .sales-page .sales-hero img {
+    max-height: 36rem;
+  }
+  .sales-page .sales-benefits > div > div {
+    min-height: 5rem;
+  }
+  .sales-page .sales-gallery article,
+  .sales-page .sales-bonus article {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  .sales-page .sales-gallery article:hover,
+  .sales-page .sales-bonus article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px -20px oklch(0.2 0.04 150 / 0.55);
+  }
+}
+
+@media (max-width: 639px) {
+  .sales-page .sales-hero {
+    padding-inline: 1rem;
+  }
+  .sales-page .sales-hero h1 {
+    font-size: clamp(1.9rem, 9vw, 2.55rem);
+  }
+  .sales-page .sales-hero > div > div {
+    border-radius: 1rem;
+  }
+  .sales-page .sales-gallery article h3 {
+    padding: 0.75rem;
+    font-size: 0.82rem;
+  }
+  .sales-page .sales-offers article {
+    padding: 1.15rem;
+  }
+  .sales-page .sales-offers article .text-4xl {
+    font-size: 2.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sales-page .sales-hero a[href="#ofertas"],
+  .sales-page a[href="#ofertas"],
+  .sales-page .sales-gallery article,
+  .sales-page .sales-bonus article {
+    transition: none;
+  }
+}
