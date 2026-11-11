@@ -100,13 +100,13 @@ const faq = [
 
 function Index() {
   return (
-    <main className='overflow-x-hidden'>
+    <main className='sales-page overflow-x-hidden'>
       <PurchaseNotifications />
       <div className='bg-primary px-4 py-2 text-center text-xs font-bold tracking-wide text-primary-foreground sm:text-sm'>
         <p>⏰ A PROMOÇÃO DESSA PÁGINA ACABA NO DIA 10/11/2026</p>
       </div>
 
-      <section className='bg-background px-5 py-6 sm:py-9 md:px-8 md:py-12'>
+      <section className='sales-hero bg-background px-5 py-6 sm:py-9 md:px-8 md:py-12'>
         <div className='mx-auto flex max-w-5xl flex-col items-center text-center'>
           <p className='mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-secondary'>Coleção digital</p>
           <h1 className='max-w-4xl text-[1.75rem] font-bold leading-tight text-primary sm:text-4xl md:text-5xl'>365 Receitas Sem Açúcar, Sem Glúten e Sem Lactose</h1>
@@ -125,7 +125,7 @@ function Index() {
         </div>
       </section>
 
-      <section className='px-5 pb-10 md:pb-14' aria-label='Destaques da coleção'>
+      <section className='sales-benefits px-5 pb-10 md:pb-14' aria-label='Destaques da coleção'>
         <div className='mx-auto grid max-w-5xl grid-cols-2 gap-3 border-y border-border py-4 text-center sm:grid-cols-4 sm:gap-5'>
           {[[CandyOff, 'Sem açúcar adicionado'], [Wheat, 'Opções sem glúten'], [Milk, 'Opções sem lactose'], [BookOpen, '365 receitas']].map(([I, label]) => {
             const Icon = I as typeof Leaf;
@@ -134,7 +134,7 @@ function Index() {
         </div>
       </section>
 
-      <section id='galeria' className='scroll-mt-4 px-5 py-10 md:py-14'>
+      <section id='galeria' className='sales-gallery scroll-mt-4 px-5 py-10 md:py-14'>
         <div className='mx-auto max-w-6xl'>
           <Title eyebrow='Uma prévia da coleção'>Algumas receitas que você encontra</Title>
           <div className='grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-4'>
@@ -147,7 +147,7 @@ function Index() {
         </div>
       </section>
 
-      <section className='bg-card px-5 py-10 md:py-14'>
+      <section className='sales-categories bg-card px-5 py-10 md:py-14'>
         <div className='mx-auto max-w-5xl'>
           <Title eyebrow='Conteúdo da coleção' sub='Receitas doces e salgadas organizadas para diferentes momentos do dia.'>365 receitas em categorias</Title>
           <div className='divide-y divide-border border-y border-border'>
@@ -160,7 +160,7 @@ function Index() {
         </div>
       </section>
 
-      <section className='px-5 py-10 md:py-14'>
+      <section className='sales-bonus px-5 py-10 md:py-14'>
         <div className='mx-auto max-w-5xl'>
           <Title eyebrow='Materiais extras' sub='Incluídos no pacote completo, conforme a opção apresentada na oferta.'>O pacote completo também inclui</Title>
           <div className='grid gap-3 sm:grid-cols-3'>
@@ -172,7 +172,7 @@ function Index() {
         </div>
       </section>
 
-      <section id='ofertas' className='scroll-mt-4 bg-card px-5 py-10 md:py-14'>
+      <section id='ofertas' className='sales-offers scroll-mt-4 bg-card px-5 py-10 md:py-14'>
         <div className='mx-auto max-w-5xl'>
           <Title eyebrow='Escolha sua coleção' sub='Confira o conteúdo e o preço de cada opção antes de seguir para o checkout.'>Encontre a opção ideal para você</Title>
           <div className='grid items-stretch gap-4 md:grid-cols-2 md:gap-6'>
@@ -202,7 +202,7 @@ function Index() {
 
       <ReviewsSection />
 
-      <section className='px-5 py-10 md:py-14'>
+      <section className='sales-trust px-5 py-10 md:py-14'>
         <div className='mx-auto grid max-w-4xl gap-8 sm:grid-cols-2'>
           <article className='flex items-start gap-4 border-t border-border pt-5'>
             <span className='grid h-12 w-12 shrink-0 place-items-center rounded-full bg-muted text-primary'><ShieldCheck className='h-6 w-6' /></span>
@@ -215,7 +215,7 @@ function Index() {
         </div>
       </section>
 
-      <section className='bg-card px-5 py-10 md:py-14'>
+      <section className='sales-faq bg-card px-5 py-10 md:py-14'>
         <div className='mx-auto max-w-3xl'>
           <Title eyebrow='Dúvidas frequentes'>Perguntas e respostas</Title>
           <Accordion type='single' collapsible className='space-y-2'>
